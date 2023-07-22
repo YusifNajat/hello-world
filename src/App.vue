@@ -15,8 +15,8 @@ export default{
      lname:"najat",
      items:[
       {name:"tv",price:100},
-          {name:"phone",price:200},
-              {name:"laptop",price:300}
+      {name:"phone",price:200},
+      {name:"laptop",price:300}
      ]
     }
   },
