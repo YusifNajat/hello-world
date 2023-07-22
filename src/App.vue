@@ -1,18 +1,9 @@
 <template>
 <div>
-  <pre>{{JSON.stringify(formValues,null,2)}}</pre>
-<div v-for="skill in formValues.staticSkills" :key="skill">
-  <input type="checkbox" id="skills-code" :value="skill" v-model="formValues.skills">
-  <label for="skills-code">{{skill}}</label>
-</div>
-<div>
-  <input type="radio" value="+2" id="plus-two" v-model="formValues.experincecode">
-  <label for="plus-two">two years</label>
-    <input type="radio" value="+4" id="plus-four" v-model="formValues.experincecode">
-  <label for="plus-four">four years</label>
-    <input type="radio" value="+6" id="plus-six" v-model="formValues.experincecode">
-  <label for="plus-six">six years</label>
-</div>
+<h2>fullName - {{fname}} {{lname}} </h2>
+<h2>computed properies - {{fullname()}} </h2>
+<h2>Tottal is {{items.reduce((acc,curr)=>acc+curr.price,0)}} </h2>
+<h2>total in computed properies {{total()}}</h2>
 </div>
 </template>
 <script>
@@ -20,15 +11,21 @@ export default{
   name:"app",
   data(){
     return {
-     formValues:{
-      staticSkills:['html','css','js','vue','react','anguler','node','laravel'],
-      skills:[],
-      experincecode:''
-     }
+     fname:"yusif",
+     lname:"najat",
+     items:[
+      {name:"tv",price:100},
+          {name:"phone",price:200},
+              {name:"laptop",price:300}
+     ]
     }
   },
   methods:{
-    onSubmitForm(){
+    fullname(){
+      return `${this.fname} ${this.lname}`
+    },
+    total(){
+      return this.items.reduce((acc,curr)=>acc+curr.price,0)
     }
   }
 
