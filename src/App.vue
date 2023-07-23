@@ -1,9 +1,14 @@
 <template>
 <div>
 <h2>fullName - {{fname}} {{lname}} </h2>
-<h2>computed properies - {{fullname()}} </h2>
+<h2>computed properies - {{fullname}} </h2>
 <h2>Tottal is {{items.reduce((acc,curr)=>acc+curr.price,0)}} </h2>
-<h2>total in computed properies {{total()}}</h2>
+<h2>total in computed properies {{total}}</h2>
+<h2>total in mithod properies {{total_mithod()}}</h2>
+<button @click="items.push({name:'ipad',price:150})">
+  Add Item
+</button>
+<input type="text" v-model="country">
 </div>
 </template>
 <script>
@@ -17,14 +22,22 @@ export default{
       {name:"tv",price:100},
       {name:"phone",price:200},
       {name:"laptop",price:300}
-     ]
+     ],
+     country:""
     }
   },
   methods:{
+     total_mithod(){
+         console.log('mithods')
+      return this.items.reduce((acc,curr)=>acc+curr.price,0)
+    }
+  },
+  computed:{
     fullname(){
       return `${this.fname} ${this.lname}`
     },
     total(){
+       console.log('computed')
       return this.items.reduce((acc,curr)=>acc+curr.price,0)
     }
   }
