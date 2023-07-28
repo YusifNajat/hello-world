@@ -1,31 +1,28 @@
+
 <template>
-  <h2>Root Component username is {{ name }}</h2>
-<h2><CompinentC /></h2>
-<h2><ComponentE/></h2>
-<h2><ComponentF /></h2>
+  <div>
+    <button @click="showpopup=true">show pop up</button>
+    <pop-up v-show="showpopup" @closePopup="closePopup_"/>
+  </div>
 </template>
 <script>
-import CompinentC from './components/CompinentC.vue'
-import ComponentE from './components/ComponentE.vue';
-import ComponentF from './components/ComponentF.vue';
-export default {
+import PopUp from './components/PopUp.vue'
+export default{
+  components: { PopUp },
   name:'app',
-  components:{
-    CompinentC,
-    ComponentF,
-    ComponentE
-},
   data(){
-return {
-  name:'Yusf-eng'
-}
+    return {
+      showpopup:false
+    }
   },
-  provide:
-    { username:"Yusif-eng"
+  methods:{
+    closePopup_(name){
+      console.log('name', name)
+      this.showpopup=false
+    }
   }
 }
 </script>
-
 
 <style>
 #app {
