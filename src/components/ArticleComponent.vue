@@ -1,6 +1,6 @@
 <template>
     <div>
-<h2>{{ title }}</h2>
+<h2 :="$attrs">{{ title }}</h2>
 <h2>the number of likes is - {{ likes }}</h2>
 <h2>are the Article is published {{ ispubleshed?'yes':'no' }}</h2>
 <h2 v-for="(article,key) in articleSubjects" :key="key">
@@ -27,7 +27,8 @@
             atendetdetail:Object,
             Decress:Function,
             count:Number
-        }
+        },
+        inheritAttrs:false
     }
 </script>
 

@@ -1,31 +1,27 @@
 <template>
-  <ArticleComponent  title="Title For Article is Sport"
-  :likes="50"
-  :ispubleshed="true"
-  :articleSubjects="['amanj','ayat','karwan']"
-  :atendetdetail="{name:'yusif',age:'25'}"
-  :Decress="Decress"
-  :count="count"
-  />
+  <h2>Root Component username is {{ name }}</h2>
+<h2><CompinentC /></h2>
+<h2><ComponentE/></h2>
+<h2><ComponentF /></h2>
 </template>
 <script>
-import ArticleComponent from './components/ArticleComponent.vue'
+import CompinentC from './components/CompinentC.vue'
+import ComponentE from './components/ComponentE.vue';
+import ComponentF from './components/ComponentF.vue';
 export default {
   name:'app',
   components:{
-    ArticleComponent
-  },
+    CompinentC,
+    ComponentF,
+    ComponentE
+},
   data(){
-    return {
-      name:'Yusof N Ismael',
-      position:'Check excusive officer',
-      count:1
-    }
+return {
+  name:'Yusf-eng'
+}
   },
-  methods:{
-    Decress(){
-return this.count++
-    }
+  provide:
+    { username:"Yusif-eng"
   }
 }
 </script>
@@ -77,5 +73,11 @@ select {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+#heading{
+  color: dodgerblue;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: gold;
 }
 </style>
