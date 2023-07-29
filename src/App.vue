@@ -1,17 +1,37 @@
 
 <template>
-  <div>
-   <custom-input v-model="name"/>
+  <div >
+ <CardComponent>
+  <h2>card component 1</h2>
+ </CardComponent>
+ <CardComponent>
+  <h2>card component 2</h2>
+  <img src="https://picsum.photos/200" alt="">
+ </CardComponent>
+ <CardComponent>
+  <h2>card component 3</h2>
+  <button>view details</button>
+ </CardComponent>
+  <CardComponent>
+    <template v-slot:header>
+      <h2>card component 1</h2>
+    </template>
+    <template v-slot:content>
+      <img src="https://picsum.photos/200" alt="">
+    </template>
+    <template v-slot:footer>
+      <button>view details</button>
+    </template>
+  </CardComponent>
   </div>
 </template>
 <script>
-import CustomInput from './components/CustomInput.vue'
+import CardComponent from './components/CardComponent.vue'
 export default{
-  components: { CustomInput },
+  components: { CardComponent },
   name:'app',
   data(){
     return {
-      name:''
     }
   },
 }
@@ -26,6 +46,7 @@ export default{
   color: #2c3e50;
   margin-top: 60px;
 }
+
 .underline {
   text-decoration: underline;
 }
