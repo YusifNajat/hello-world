@@ -1,14 +1,28 @@
 <template>
     <div>
 <h2>This is a PopUp</h2>
-<button @click="$emit('closePopup','yusif eng')">Close PopUp</button>
+<input type="text" v-model="name">
+<button @click="$emit('closePopup',name)">Close PopUp</button>
     </div>
 </template>
 
 <script>
     export default {
        name:'PopUp' ,
-       emits:['closePopup']
+       emits:{
+        closePopup:(name)=>{
+            if (!name) {
+                return false
+            }else {
+                return true
+            }
+        }
+       },
+       data(){
+        return{
+            name:''
+        }
+       }
     }
 </script>
 
