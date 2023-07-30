@@ -1,36 +1,24 @@
 
 <template>
   <div >
-<name-list >
-  <template v-slot:default="slotProps">
-{{ slotProps.fname }} {{ slotProps.lname }}
-  </template>
-</name-list>
-<name-list >
-  <template v-slot:default="slotProps">
-    {{ slotProps.lname }}, {{ slotProps.fname }} 
-  </template>
-</name-list>
-<name-list >
-  <template v-slot:default="slotProps">
-     {{ slotProps.fname }} 
-  </template>
-</name-list>
+<input-component v-model="name" />
   </div>
 </template>
 <script>
-import NameList from './components/NameList.vue'
+import InputComponent from './components/InputComponent.vue'
 export default{
-  components: {NameList  },
+  components: { InputComponent },
   name:'app',
   data(){
     return {
+      name:''
     }
   },
+
 }
 </script>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,7 +27,7 @@ export default{
   color: #2c3e50;
   margin-top: 60px;
 }
-
+h4{color: dodgerblue;}
 .underline {
   text-decoration: underline;
 }
