@@ -1,17 +1,22 @@
 
 <template>
   <div >
-<input-component v-model="name" />
+    <button @click="activeTab='tabA'">Tab A</button>
+    <button  @click="activeTab='tabB'">Tab B</button>
+    <button  @click="activeTab='tabC'">Tab C</button>
+<component :is="activeTab"/>
   </div>
 </template>
 <script>
-import InputComponent from './components/InputComponent.vue'
+import TabA from './components/TabA.vue'
+import TabB from './components/TabB.vue'
+import TabC from './components/TabC.vue'
 export default{
-  components: { InputComponent },
+  components: {TabA, TabB, TabC  },
   name:'app',
   data(){
     return {
-      name:''
+      activeTab:'tabA'
     }
   },
 
