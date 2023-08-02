@@ -4,7 +4,9 @@
     <button @click="activeTab='tabA'">Tab A</button>
     <button  @click="activeTab='tabB'">Tab B</button>
     <button  @click="activeTab='tabC'">Tab C</button>
-<component :is="activeTab"/>
+<keep-alive>
+  <component :is="activeTab"/>
+</keep-alive>
   </div>
 </template>
 <script>
@@ -16,9 +18,11 @@ export default{
   name:'app',
   data(){
     return {
-      activeTab:'tabA'
+      activeTab:'tabA',
+      sharedData:''
     }
   },
+  provide:{sharedData:'ok'}
 
 }
 </script>
