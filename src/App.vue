@@ -7,7 +7,9 @@
 <keep-alive>
   <component :is="activeTab"/>
 </keep-alive> -->
+<teleport to="#teleport-root">
 <tele-port-component />
+</teleport>
   </div>
 </template>
 <script>
