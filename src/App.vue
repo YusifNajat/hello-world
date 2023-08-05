@@ -1,28 +1,24 @@
 
 <template>
   <div >
-    <button @click="activeTab='tabA'">Tab A</button>
+    <!-- <button @click="activeTab='tabA'">Tab A</button>
     <button  @click="activeTab='tabB'">Tab B</button>
     <button  @click="activeTab='tabC'">Tab C</button>
 <keep-alive>
   <component :is="activeTab"/>
-</keep-alive>
+</keep-alive> -->
+<tele-port-component />
   </div>
 </template>
 <script>
-import TabA from './components/TabA.vue'
-import TabB from './components/TabB.vue'
-import TabC from './components/TabC.vue'
+import TelePortComponent from './components/TelePortComponent.vue'
 export default{
-  components: {TabA, TabB, TabC  },
+  components: {TelePortComponent  },
   name:'app',
   data(){
     return {
-      activeTab:'tabA',
-      sharedData:''
     }
   },
-  provide:{sharedData:'ok'}
 
 }
 </script>
