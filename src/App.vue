@@ -1,27 +1,18 @@
 
 <template>
   <div >
-    <!-- <button @click="activeTab='tabA'">Tab A</button>
-    <button  @click="activeTab='tabB'">Tab B</button>
-    <button  @click="activeTab='tabC'">Tab C</button>
-<keep-alive>
-  <component :is="activeTab"/>
-</keep-alive> -->
-<teleport to="#teleport-root">
-<tele-port-component />
-</teleport>
+<parent-component />
   </div>
 </template>
 <script>
-import TelePortComponent from './components/TelePortComponent.vue'
+import ParentComponent from './components/ParentComponent.vue'
 export default{
-  components: {TelePortComponent  },
+  components: {  ParentComponent },
   name:'app',
   data(){
     return {
     }
   },
-
 }
 </script>
 
