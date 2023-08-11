@@ -1,13 +1,17 @@
 
 <template>
   <div >
-<parent-component />
+    <!-- <template-ref /> -->
+    <increment-counter />
+    <br/>
+    <hover-counter/>
   </div>
 </template>
 <script>
-import ParentComponent from './components/ParentComponent.vue'
+import HoverCounter from './components/HoverCounter.vue'
+import IncrementCounter from './components/IncrementCounter.vue'
 export default{
-  components: {  ParentComponent },
+  components: { IncrementCounter, HoverCounter   },
   name:'app',
   data(){
     return {

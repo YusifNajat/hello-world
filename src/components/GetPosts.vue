@@ -1,9 +1,7 @@
 <template>
     <div>
         <h3 v-show="errmesage">{{ errmesage }}</h3>
-        <input type="text" v-model="formdata.title" placeholder="title">
-        <input type="text" v-model="formdata.body" placeholder="body">
-        <button @click="PostData()">get posts</button>
+        <!-- <button @click="Getposts()">get posts</button> -->
         <h4 v-for="(post,index) in posts" :key="index">
          <h2>   {{ post.id }} 
             {{ post.title }}</h2>
@@ -28,6 +26,9 @@
                     body:''
                 }
             }
+        },
+        mounted(){
+this.Getposts()
         },
         methods:{
   Getposts(){
