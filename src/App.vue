@@ -1,13 +1,13 @@
 
 <template>
   <div >
-   <data-component/>
+   <data-change/>
   </div>
 </template>
 <script>
-import DataComponent from './compositionApi/DataComponent.vue'
+import DataChange from './compositionApi/DataChange.vue'
 export default{
-  components: {DataComponent    },
+  components: {DataChange},
   name:'app',
   data(){
     return {
