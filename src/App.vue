@@ -1,13 +1,13 @@
 
 <template>
   <div >
-   <data-change/>
+   <vmodel-composition/>
   </div>
 </template>
 <script>
-import DataChange from './compositionApi/DataChange.vue'
+import VmodelComposition from './compositionApi/VmodelComposition.vue'
 export default{
-  components: {DataChange},
+  components: {VmodelComposition},
   name:'app',
   data(){
     return {
