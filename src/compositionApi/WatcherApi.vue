@@ -5,7 +5,9 @@
 <input type="text" v-model="lname" placeholder="lname">
     </div>
 </template>
-
+<!-- wathers bakar de bo 
+away hamu katek state bgordre lagare gorani har shtek la statetaka
+-->
 <script>
 import {ref,watch} from 'vue'
     export default {
