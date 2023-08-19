@@ -1,15 +1,17 @@
 
 <template>
   <div >
-   <vmodel-composition/>
+   <watcher-api/>
   </div>
 </template>
 <script>
-import VmodelComposition from './compositionApi/VmodelComposition.vue'
+import WatcherApi from './compositionApi/WatcherApi.vue'
+
 export default{
-  components: {VmodelComposition},
+  components: {WatcherApi},
   name:'app',
-  data(){
+  
+    WatcherApidata(){
     return {
     }
   },
