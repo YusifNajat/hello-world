@@ -1,20 +1,17 @@
 
 <template>
   <div >
-   <watcher-api/>
+  <Parent_Component/>
   </div>
 </template>
 <script>
-import WatcherApi from './compositionApi/WatcherApi.vue'
+import Parent_Component from './compositionApi/Parent_Component.vue';
+
 
 export default{
-  components: {WatcherApi},
+  components: { Parent_Component },
   name:'app',
   
-    WatcherApidata(){
-    return {
-    }
-  },
 }
 </script>
 
