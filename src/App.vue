@@ -1,16 +1,15 @@
 
 <template>
   <div >
-  <Parent_Component/>
+    <person-parent />
   </div>
 </template>
 <script>
-import Parent_Component from './compositionApi/Parent_Component.vue';
-
-
+import PersonParent from './compositionApi/PersonParent.vue'
 export default{
-  components: { Parent_Component },
+  components: {PersonParent  },
   name:'app',
+
   
 }
 </script>
