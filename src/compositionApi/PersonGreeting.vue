@@ -1,6 +1,7 @@
 <template>
     <div>
 <h2>Hello {{ fullName }}</h2>
+<button @click="SentEvent">Call hero</button>
     </div>
 </template>
 
@@ -9,12 +10,17 @@ import { computed } from 'vue'
     export default {
         name:'PersonGreeting',
         props:['fname','lname'],
-        setup(props){
+        emits:['CallHero'],
+        setup(props,context){
          const fullName=computed(()=>{
                 return `${props.fname} ${props.lname}`
             } )
+            function SentEvent(){
+                return context.emit('CallHero',fullName.value)
+            }
             return {
-                fullName
+                fullName,
+                SentEvent
             }
         }
         // computed:{

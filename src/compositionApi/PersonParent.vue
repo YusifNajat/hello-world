@@ -2,7 +2,7 @@
     <div>
         <input type="text" v-model="fname" placeholder="First Name">
     <input type="text" v-model="lname" placeholder="Second Name">
-<person-greeting :fname="fname" :lname="lname"/>
+<person-greeting :fname="fname" :lname="lname" @CallHero="CallHero"/>
     </div>
 </template>
 
@@ -15,6 +15,14 @@ import PersonGreeting from './PersonGreeting.vue'
     return {
       fname:'',
       lname:''
+    }
+  },
+  setup(){
+    function CallHero(hero){
+        alert(`how are you ${hero}`)
+    }
+    return{
+        CallHero
     }
   }
     }
