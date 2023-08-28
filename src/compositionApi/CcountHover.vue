@@ -5,10 +5,16 @@
 </template>
 
 <script>
-import MixCount from '../components/mixin/Count'
+import counterUse from "./composable/counterUse";
     export default {
         name:'CcountHover',
-        mixins:[MixCount]
+        setup(){
+            const {count,IncrementCount}=counterUse()
+            return {
+                count,
+                IncrementCount
+            }
+        }
     }
 </script>
 
