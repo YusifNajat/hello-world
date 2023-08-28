@@ -5,7 +5,7 @@ export default {
     };
   },
   methods: {
-    Increment() {
+    IncrementCount() {
       this.count += 1;
     },
   },

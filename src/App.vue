@@ -1,13 +1,16 @@
 
 <template>
   <div >
-    <person-parent />
+  <ccounter-click/>
+  <ccount-hover />
   </div>
 </template>
 <script>
-import PersonParent from './compositionApi/PersonParent.vue'
+import CcounterClick from './compositionApi/CcounterClick.vue'
+import CcountHover from './compositionApi/CcountHover.vue'
+
 export default{
-  components: {PersonParent  },
+  components: {CcounterClick, CcountHover  },
   name:'app',
 
   
