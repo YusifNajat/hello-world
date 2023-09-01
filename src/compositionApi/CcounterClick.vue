@@ -16,6 +16,7 @@ import counterUse from "./composable/counterUse";
             }
         }
         // mixins:[MixCount]
+        // comeny
     }
 </script>
 
